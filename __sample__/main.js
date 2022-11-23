@@ -14,10 +14,25 @@ function solution(year) {
   }
 }
 
-console.log(
-  solution(1905),
-  solution(1700),
-  solution(1988),
-  solution(2000),
-  solution(8),
-  solution(374));
+solution(1905);
+
+// Determine if the input string is a palindrome //
+
+function isPalindrome(inputString) {
+  var newString = '';
+  var convertedArray = inputString.split('');
+  var reversed = convertedArray.reverse();
+  var toString = reversed.toString();
+  for (var i = 0; i < toString.length; i++) {
+    if (toString[i] !== ',') {
+      newString += toString[i];
+    }
+  }
+  if (newString === inputString) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+isPalindrome('aabaa');
