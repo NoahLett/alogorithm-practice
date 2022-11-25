@@ -36,3 +36,18 @@ function isPalindrome(inputString) {
 }
 
 isPalindrome('aabaa');
+
+// Determine the highest possible product of two adjacent numbers in an array //
+
+function adjacentElementsProduct(inputArray) {
+  var highestValue = inputArray[0] * inputArray[1];
+  for (var i = 0; i < inputArray.length; i++) {
+    var currentValue = inputArray[i] * inputArray[i + 1];
+    if (currentValue > highestValue) {
+      highestValue = currentValue;
+    }
+  }
+  return highestValue;
+}
+
+adjacentElementsProduct([3, 6, -2, -5, 7, 3]);
