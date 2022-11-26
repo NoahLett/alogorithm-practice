@@ -51,3 +51,20 @@ function adjacentElementsProduct(inputArray) {
 }
 
 adjacentElementsProduct([3, 6, -2, -5, 7, 3]);
+
+// Find the area of an n-interesting polygon given n //
+
+function areaOfPolygon(n) {
+  var i = 0;
+  var area = 0;
+  while (i < n) {
+    area += (1 + (4 * i));
+    i++;
+  }
+  if (n > 1) {
+    area = area - (n - 1);
+  }
+  return area;
+}
+
+areaOfPolygon(1212);
