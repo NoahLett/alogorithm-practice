@@ -68,3 +68,13 @@ function areaOfPolygon(n) {
 }
 
 areaOfPolygon(1212);
+
+// Find the minimum number of positive integers needed to make the array consecutive //
+
+function consecutiveArray(statues) {
+  const max = Math.max(...statues);
+  const min = Math.min(...statues);
+  return ((max - min) - statues.length + 1);
+}
+
+consecutiveArray([6, 2, 3, 8]);
